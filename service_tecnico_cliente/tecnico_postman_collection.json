@@ -1,0 +1,94 @@
+{
+  "info": {
+    "name": "Tecnico API",
+    "description": "Coleção para testar as rotas do modelo Tecnico",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Tecnico",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/tecnicos",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["tecnicos"]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nome\": \"Fulano de Tal\",\n  \"cargo\": \"Técnico de Campo\",\n  \"email\": \"fulano@exemplo.com\",\n  \"senha\": \"123456\"\n}"
+        }
+      }
+    },
+    {
+      "name": "Get Tecnico by ID",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:3000/tecnicos/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["tecnicos", "1"]
+        }
+      }
+    },
+    {
+      "name": "Update Tecnico",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/tecnicos/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["tecnicos", "1"]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nome\": \"Beltrano Silva\",\n  \"cargo\": \"Supervisor\",\n  \"email\": \"beltrano@exemplo.com\",\n  \"senha\": \"654321\"\n}"
+        }
+      }
+    },
+    {
+      "name": "Delete Tecnico",
+      "request": {
+        "method": "DELETE",
+        "url": {
+          "raw": "http://localhost:3000/tecnicos/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["tecnicos", "1"]
+        }
+      }
+    },
+    {
+      "name": "List Tecnicos",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:3000/tecnicos",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["tecnicos"]
+        }
+      }
+    }
+  ]
+}
