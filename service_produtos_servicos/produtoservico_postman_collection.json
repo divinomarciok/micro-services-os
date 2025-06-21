@@ -1,0 +1,94 @@
+{
+  "info": {
+    "name": "ProdutoServico API",
+    "description": "Coleção para testar as rotas do modelo ProdutoServico",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create ProdutoServico",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/produtos-servicos",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["produtos-servicos"]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"codigo\": \"P001\",\n  \"nome\": \"Corte de Grama\",\n  \"descricao\": \"Serviço de corte de grama residencial\",\n  \"valor\": 150.5,\n  \"tempoEstimado\": 120\n}"
+        }
+      }
+    },
+    {
+      "name": "Get ProdutoServico by ID",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:3000/produtos-servicos/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["produtos-servicos", "1"]
+        }
+      }
+    },
+    {
+      "name": "Update ProdutoServico",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/produtos-servicos/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["produtos-servicos", "1"]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"codigo\": \"P002\",\n  \"nome\": \"Poda de Árvore\",\n  \"descricao\": \"Serviço de poda de árvore urbana\",\n  \"valor\": 200.0,\n  \"tempoEstimado\": 180\n}"
+        }
+      }
+    },
+    {
+      "name": "Delete ProdutoServico",
+      "request": {
+        "method": "DELETE",
+        "url": {
+          "raw": "http://localhost:3000/produtos-servicos/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["produtos-servicos", "1"]
+        }
+      }
+    },
+    {
+      "name": "List ProdutoServicos",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:3000/produtos-servicos",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["produtos-servicos"]
+        }
+      }
+    }
+  ]
+}
