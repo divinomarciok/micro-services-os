@@ -1,5 +1,5 @@
 {
-  "name": "service_produtos_servicos",
+  "name": "service_faturamento_nota",
   "version": "1.0.0",
   "main": "dist/server.js",
   "scripts": {

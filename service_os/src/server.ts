@@ -9,7 +9,7 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 
-app.use('/', osRoutes);
+app.use('/api', osRoutes);
 
 const PORT = process.env.PORT || 3000;
 

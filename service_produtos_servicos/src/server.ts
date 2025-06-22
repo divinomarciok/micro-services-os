@@ -2,14 +2,19 @@ import 'reflect-metadata';
 import express from 'express';
 import dotenv from 'dotenv';
 import { AppDataSource } from './config/db';
-import osRoutes from './routes/os.routes';
+import produtoServicoRoutes from './routes/produtoServico.routes';
 
 dotenv.config();
 
 const app = express();
 app.use(express.json());
 
-app.use('/', osRoutes);
+app.use((req, res, next) => {
+  console.log(`[LOG] ${req.method} ${req.url}`);
+  next();
+});
+
+app.use('/api', produtoServicoRoutes);
 
 const PORT = process.env.PORT || 3000;
 

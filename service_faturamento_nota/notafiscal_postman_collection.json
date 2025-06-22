@@ -1,0 +1,94 @@
+{
+  "info": {
+    "name": "NotaFiscal API",
+    "description": "Coleção para testar as rotas do modelo NotaFiscal",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create NotaFiscal",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:5004/api/notas-fiscais",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5004",
+          "path": ["api", "notas-fiscais"]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"dataEmissao\": \"2025-06-22\",\n  \"ordemDeServico\": 1,\n  \"valorTotal\": 1234.56\n}"
+        }
+      }
+    },
+    {
+      "name": "Get NotaFiscal by ID",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:5004/api/notas-fiscais/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5004",
+          "path": ["api", "notas-fiscais", "1"]
+        }
+      }
+    },
+    {
+      "name": "Update NotaFiscal",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:5004/api/notas-fiscais/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5004",
+          "path": ["api", "notas-fiscais", "1"]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"dataEmissao\": \"2025-06-23\",\n  \"ordemDeServico\": 2,\n  \"valorTotal\": 4321.00\n}"
+        }
+      }
+    },
+    {
+      "name": "Delete NotaFiscal",
+      "request": {
+        "method": "DELETE",
+        "url": {
+          "raw": "http://localhost:5004/api/notas-fiscais/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5004",
+          "path": ["api", "notas-fiscais", "1"]
+        }
+      }
+    },
+    {
+      "name": "List NotaFiscal",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:5004/api/notas-fiscais",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5004",
+          "path": ["api", "notas-fiscais"]
+        }
+      }
+    }
+  ]
+}

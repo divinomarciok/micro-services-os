@@ -1,5 +1,5 @@
 {
-  "name": "service_produtos_servicos",
+  "name": "service_os",
   "version": "1.0.0",
   "main": "dist/server.js",
   "scripts": {

@@ -2,14 +2,14 @@ import 'reflect-metadata';
 import express from 'express';
 import dotenv from 'dotenv';
 import { AppDataSource } from './config/db';
-import osRoutes from './routes/os.routes';
+import notaFiscalRoutes from './routes/notaFiscal.routes';
 
 dotenv.config();
 
 const app = express();
 app.use(express.json());
 
-app.use('/', osRoutes);
+app.use('/api', notaFiscalRoutes);
 
 const PORT = process.env.PORT || 3000;
 

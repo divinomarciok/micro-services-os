@@ -1,0 +1,94 @@
+{
+  "info": {
+    "name": "OS API",
+    "description": "Coleção para testar as rotas do modelo OS",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create OS",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:5003/api/os",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5003",
+          "path": ["api", "os"]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"cliente\": 1,\n  \"produtoServico\": 1,\n  \"tecnico\": 1,\n  \"dataAbertura\": \"2025-06-22\",\n  \"status\": \"aberta\",\n  \"descricaoProblema\": \"Problema de teste\"\n}"
+        }
+      }
+    },
+    {
+      "name": "Get OS by ID",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:5003/api/os/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5003",
+          "path": ["api", "os", "1"]
+        }
+      }
+    },
+    {
+      "name": "Update OS",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:5003/api/os/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5003",
+          "path": ["api", "os", "1"]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"cliente\": 2,\n  \"produtoServico\": 2,\n  \"tecnico\": 2,\n  \"dataAbertura\": \"2025-06-23\",\n  \"status\": \"fechada\",\n  \"descricaoProblema\": \"Problema resolvido\"\n}"
+        }
+      }
+    },
+    {
+      "name": "Delete OS",
+      "request": {
+        "method": "DELETE",
+        "url": {
+          "raw": "http://localhost:5003/api/os/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5003",
+          "path": ["api", "os", "1"]
+        }
+      }
+    },
+    {
+      "name": "List OS",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:5003/api/os",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5003",
+          "path": ["api", "os"]
+        }
+      }
+    }
+  ]
+}
