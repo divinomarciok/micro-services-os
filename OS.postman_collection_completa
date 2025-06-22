@@ -1,0 +1,636 @@
+{
+	"info": {
+		"_postman_id": "6fbd86a6-de7a-4a1e-baa7-b3c4383c52fc",
+		"name": "OS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35028437"
+	},
+	"item": [
+		{
+			"name": "Clientes",
+			"item": [
+				{
+					"name": "Create Cliente",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nome\": \"John Doe\",\n  \"cpfCnpj\": \"12345678901\",\n  \"endereco\": \"123 Main St\",\n  \"telefone\": \"1234567890\",\n  \"email\": \"john.doe@example.com\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5001/api/clientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5001/api/clientes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"clientes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Cliente",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nome\": \"Jane Doe\",\n  \"cpfCnpj\": \"98765432101\",\n  \"endereco\": \"456 Elm St\",\n  \"telefone\": \"0987654321\",\n  \"email\": \"jane.doe@example.com\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5001/api/clientes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"clientes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Cliente",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5001/api/clientes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"clientes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Clientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5001/api/clientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"clientes"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tecnico",
+			"item": [
+				{
+					"name": "Create Tecnico",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nome\": \"Fulano de Tal\",\n  \"cargo\": \"Técnico de Campo\",\n  \"email\": \"fulano@exemplo.com\",\n  \"senha\": \"123456\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5001/api/tecnicos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"tecnicos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Tecnico by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5001/api/tecnicos/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"tecnicos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Tecnico",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nome\": \"Beltrano\"\n//  \"cargo\": \"Supervisor\",\n//  \"email\": \"beltrano@exemplo.com\",\n // \"senha\": \"654321\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5001/api/tecnicos/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"tecnicos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Tecnico",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5001/api/tecnicos/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"tecnicos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Tecnicos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5001/api/tecnicos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"tecnicos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ProdutoService",
+			"item": [
+				{
+					"name": "Create ProdutoServico",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"codigo\": \"P001\",\n  \"nome\": \"Corte de Grama\",\n  \"descricao\": \"Serviço de corte de grama residencial\",\n  \"valor\": 150.5,\n  \"tempoEstimado\": 120\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5002/api/produtos-servicos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5002",
+							"path": [
+								"api",
+								"produtos-servicos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get ProdutoServico by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/produtos-servicos/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"produtos-servicos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update ProdutoServico",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"codigo\": \"P002\",\n  \"nome\": \"Poda de Árvore\",\n  \"descricao\": \"Serviço de poda de árvore urbana\",\n  \"valor\": 200.0,\n  \"tempoEstimado\": 180\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/produtos-servicos/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"produtos-servicos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete ProdutoServico",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/produtos-servicos/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"produtos-servicos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List ProdutoServicos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/produtos-servicos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"produtos-servicos"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Ordem Serviço",
+			"item": [
+				{
+					"name": "Create OS",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"cliente\": 1,\n  \"produtoServico\": 1,\n  \"tecnico\": 1,\n  \"dataAbertura\": \"2025-06-22\",\n  \"status\": \"aberta\",\n  \"descricaoProblema\": \"Problema de teste\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5003/api/os",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5003",
+							"path": [
+								"api",
+								"os"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get OS by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5003/api/os/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5003",
+							"path": [
+								"api",
+								"os",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update OS",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"cliente\": 2,\n  \"produtoServico\": 2,\n  \"tecnico\": 2,\n  \"dataAbertura\": \"2025-06-23\",\n  \"status\": \"fechada\",\n  \"descricaoProblema\": \"Problema resolvido\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5003/api/os/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5003",
+							"path": [
+								"api",
+								"os",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete OS",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5003/api/os/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5003",
+							"path": [
+								"api",
+								"os",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List OS",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5003/api/os",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5003",
+							"path": [
+								"api",
+								"os"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Nota fiscal",
+			"item": [
+				{
+					"name": "Create NotaFiscal",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"dataEmissao\": \"2025-06-22\",\n  \"ordemDeServico\": 1,\n  \"valorTotal\": 1234.56\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5004/api/notas-fiscais",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5004",
+							"path": [
+								"api",
+								"notas-fiscais"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get NotaFiscal by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5004/api/notas-fiscais/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5004",
+							"path": [
+								"api",
+								"notas-fiscais",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update NotaFiscal",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"dataEmissao\": \"2025-06-23\",\n  \"ordemDeServico\": 2,\n  \"valorTotal\": 4321.00\n}"
+						},
+						"url": {
+							"raw": "http://localhost:5004/api/notas-fiscais/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5004",
+							"path": [
+								"api",
+								"notas-fiscais",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete NotaFiscal",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5004/api/notas-fiscais/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5004",
+							"path": [
+								"api",
+								"notas-fiscais",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List NotaFiscal",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5004/api/notas-fiscais",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5004",
+							"path": [
+								"api",
+								"notas-fiscais"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
